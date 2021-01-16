@@ -1,0 +1,6 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rd2pdf.*$
+^GenerateManual\.R$
+^often_0\.1\.pdf$
+^.*manual\.tests.*$

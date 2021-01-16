@@ -1,0 +1,26 @@
+#Generate help files
+devtools::document()
+#Generate help files
+devtools::document()
+#Generate help files
+devtools::document()
+?Switchboard
+#Check package
+devtools::check(args="--as-cran")
+#Check package
+devtools::check(args="--as-cran")
+#Check package
+devtools::check(args="--as-cran")
+#Check package
+devtools::check(args="--as-cran")
+ls(all.names=T)
+#Generate help files
+devtools::document()
+devtools::build()
+library(often)
+ls(all.names=T)
+library(often)
+library(often)
+devtools::build()
+devtools::build()
+library(often)

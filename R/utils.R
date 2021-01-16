@@ -1,0 +1,99 @@
+
+
+#' @name Utilities
+#' @title Utilities
+#' Useful tools for programming.
+NULL
+
+#' @rdname Utilities
+#' @details \code{now()} returns the current numeric Linux timestamp.
+#' @export
+#'
+#' @examples
+#' now()
+now<-function(){
+  as.numeric(Sys.time())
+}
+
+
+#' @rdname Utilities
+#' @param x Argument to be bquoted
+#'
+#' @details \code{bquote.arg()} is to be used inside functions.
+#' It returns the content of the argument as a call, but evaluates parts of the argument that were wrapped inside \code{.()}, akin to \code{bquote()}.
+#' @export
+#'
+#' @examples
+#' testfunction<-function(x){ bquote.arg(x) }
+#' testfunction(a + b)
+#' # a + b
+#' testfunction(a + b + .(5+5))
+#' # a + b + 10
+bquote.arg<-function(x){
+  calls<-match.call(definition=sys.function(sys.parent(1)),sys.call(sys.parent(1)))
+  cl<-calls[names(calls) == deparse(substitute(x))][[1]]
+  do.call(bquote,list(expr=cl))
+}
+
+#' @rdname Utilities
+#'
+#' @param ... named arguments, where the name of the argument is a variable class,
+#' and the argument itself is the value to be checked for its type.
+#' \code{function} cannot be provided as argument name,
+#' so the shorthand \code{fun} must be used.
+#'
+#' @details \code{check.types()} checks the class of its arguments,
+#' and errors if an argument does not match the class that was provided
+#' as argument name.
+#' @export
+#'
+#' @examples
+#' check.types(numeric=3,character="a",fun=read.csv)
+#' # TRUE
+#' \dontrun{
+#' check.types(numeric="3")
+#' }
+#' # Error in check.types(numeric = "3") :
+#' # Argument 1 with value 3 should be of type numeric, but is of type character
+check.types<-function(...){
+  inputs<-sapply(match.call(),function(x){x})[-1]
+  args<-list(...)
+  types<-names(args)
+
+  types[types=="fun"]<-"function"
+
+  errvect<-character(0)
+  for(i in seq_along(args)){
+    if(!is(args[[i]],types[i])){
+      errvect[length(errvect)+1]<-paste0("Argument ",i, " with value ",as.character(inputs[[i]])," should be of type ",types[i],", but is of type ",class(args[[i]]))
+    }
+  }
+  if(length(errvect)>0){
+    stop(paste(errvect,collapse="\n"))
+    return(FALSE)
+  }else{
+    return(TRUE)
+  }
+}
+
+#' @rdname Utilities
+#'
+#' @param x a vector of values
+#' @param init an initial value
+#' @param step steps over which to be quantized
+#' @param bias when quantizing, should the value be rounded up or down?
+#'
+#' @details \code{quantize()} quantizes a vector.
+#' @return \code{quantize()} returns a quantized numeric vector.
+#' @export
+#'
+#' @examples
+#' quantize(1:20,0.5,2,"ceiling")
+#' # 2.5  2.5  4.5  4.5  6.5  6.5  8.5  8.5 10.5 10.5 12.5 12.5 14.5 14.5 16.5 16.5 18.5 18.5 20.5 20.5
+quantize<-function(x,init,step,bias=c("round","floor","ceiling")){
+  bias<-match.arg(bias)
+  return(do.call(bias,list(x=(x-init) / step))*step+init)
+}
+
+
+

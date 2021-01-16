@@ -1,0 +1,9 @@
+library(often)
+
+addJob(print("bitch"),now()+2)
+addJob(print("fuck"),now()+10)
+startLoop()
+
+
+stopLoop()
+

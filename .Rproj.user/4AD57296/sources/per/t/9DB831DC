@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610727635049.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3575498418",
+    "id" : "9DB831DC",
+    "lastKnownWriteTime" : 1610748865,
+    "last_content_update" : 1610748865134,
+    "path" : "C:/Users/csel.sbg/Dropbox/Scrapers/often/../oftentests.R",
+    "project_path" : "../oftentests.R",
+    "properties" : {
+        "cursorPosition" : "8,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

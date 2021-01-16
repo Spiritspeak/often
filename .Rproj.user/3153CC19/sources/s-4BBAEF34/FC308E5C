@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1608979579065.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FC308E5C",
+    "lastKnownWriteTime" : 1609001311,
+    "last_content_update" : 1609001311767,
+    "path" : "C:/Users/Sercan/Dropbox/Scrapers/often/GenerateManual.R",
+    "project_path" : "GenerateManual.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

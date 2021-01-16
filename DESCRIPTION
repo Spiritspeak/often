@@ -1,0 +1,11 @@
+Package: often
+Title: Schedules functions to run at periodic intervals
+Version: 0.1
+Authors@R: person("Sercan", "Kahveci", email = "sercan.kahveci@sbg.ac.at",
+                  role = c("aut", "cre"))
+Description: Schedules functions to run at periodic intervals. 
+Depends: R (>= 3.1.0), later, magrittr, methods
+License: GPL-3
+LazyData: true
+ByteCompile: true
+RoxygenNote: 7.1.1

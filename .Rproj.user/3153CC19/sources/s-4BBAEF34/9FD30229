@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1608980766285.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9FD30229",
+    "lastKnownWriteTime" : 1609007445,
+    "last_content_update" : 1609007445609,
+    "path" : "C:/Users/Sercan/Dropbox/Scrapers/often/R/scheduler.R",
+    "project_path" : "R/scheduler.R",
+    "properties" : {
+        "cursorPosition" : "32,15",
+        "scrollLine" : "16"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

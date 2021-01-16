@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1610716391268.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2112224398",
+    "id" : "C51893A4",
+    "lastKnownWriteTime" : 1610727050,
+    "last_content_update" : 1610727050649,
+    "path" : "C:/Users/csel.sbg/Dropbox/Scrapers/often/GenerateManual.R",
+    "project_path" : "GenerateManual.R",
+    "properties" : {
+        "cursorPosition" : "10,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
