@@ -21,4 +21,9 @@ startLoop("saysMarco")
 startLoop("saysPolo")
 
 
+#switchboard test
+sw<-makeSwitchboard()
+sw$addAction(condition=TRUE,action=print("help I am stuck inside compooter"))
+sw$evaluateAll()
+sw$actions
 

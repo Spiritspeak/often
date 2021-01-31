@@ -29,8 +29,9 @@ now<-function(){
 #' # a + b
 #' testfunction(a + b + .(5+5))
 #' # a + b + 10
-bquote.arg<-function(x){
-  calls<-match.call(definition=sys.function(sys.parent(1)),sys.call(sys.parent(1)))
+bquote.arg<-function(x,up=1){
+  calls<-match.call(definition=sys.function(sys.parent(up)),
+                    call=sys.call(sys.parent(up)),expand.dots=T)
   cl<-calls[names(calls) == deparse(substitute(x))][[1]]
   do.call(bquote,list(expr=cl))
 }
